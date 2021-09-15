@@ -1,18 +1,20 @@
 const BLACKLISTED_KEY_CODES = [38];
 const COMMANDS = {
   help:
-    'Supported commands: <span class="code">about</span>, <span class="code">experience</span>, <span class="code">education</span>, <span class="code">skills</span>, <span class="code">corgi</span>',
-  about: "Hiya 👋 <br>I'm a Software Engineer that loves corgis.",
+    'Supported commands: <span class="code">about</span>, <span class="code">experience</span>, <span class="code">education</span>, <span class="code">skills</span>',
+  about: "Hiya 👋 <br>I'm a Software Engineer that loves vegetables and Jazz music.",
   skills:
-    '<span class="code">Languages:</span> JavaScript, TypeScript, PHP, Java, Python, C, HTML, CSS',
+    '<span class="code">Languages:</span> Python, JavaScript, Java, C, PHP, HTML, CSS',
   education:
-    '<strong class="header-name">University of Central Florida</strong><br>B.S. Information Technology',
+    '<strong class="header-name">University of Central Florida</strong><br>B.S. Computer Science - <br><em>minor in business administration</em>',
   resume:
-    "<a href='./joey_colon_resume.pdf' class='success link'>resume.pdf</a>",
+    "<a href='./Zachary_Mayers.pdf' class='success link'>resume.pdf</a>",
   experience:
     '<strong class="header-name">Lendmarx (Dec. 2020 - Present)</strong><br><i>Software Engineering Intern</i><br><strong class="header-name">Rustics by TL (Nov 2020 - Aug. 2021)</strong><br><i>Freelance Web Developer</i><br><strong class="header-name">Tomahawk Robotics (May 2019 - Aug. 2019)</strong><br><i>Intern</i><br>',
-  corgi:
-    "My top 3 favorite corgis (click to view):<br><a href='https://www.instagram.com/bearorcorgi/' class='success link'>Bear</a>, <a href='https://www.instagram.com/lychee_the_corgi/' class='success link'>Mochee</a>, <a href='https://www.instagram.com/thecorgijack/' class='success link'>Jack</a>",
+  clear:
+    '<p>clear</p>',
+    //   corgi:
+//     "My top 3 favorite corgis (click to view):<br><a href='https://www.instagram.com/bearorcorgi/' class='success link'>Bear</a>, <a href='https://www.instagram.com/lychee_the_corgi/' class='success link'>Mochee</a>, <a href='https://www.instagram.com/thecorgijack/' class='success link'>Jack</a>",
 };
 let userInput, terminalOutput;
 
@@ -36,7 +38,8 @@ const execute = function executeCommand(input) {
   } else {
     output += COMMANDS[input];
   }
-
+  if(input == 'clear')
+    location.reload()
   terminalOutput.innerHTML = `${terminalOutput.innerHTML}<div class="terminal-line">${output}</div>`;
   terminalOutput.scrollTop = terminalOutput.scrollHeight;
 };
