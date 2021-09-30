@@ -1,8 +1,9 @@
 const BLACKLISTED_KEY_CODES = [38];
 const COMMANDS = {
   help:
-    'Supported commands: <span class="code">about</span>, <span class="code">experience</span>, <span class="code">education</span>, <span class="code">skills</span>',
+    'Supported commands: <span class="code">about</span>, <span class="code">experience</span>, <span class="code">education</span>, <span class="code">skills</span>,<span class="code"> current_objectives</span>',
   about: "Hiya 👋 <br>I'm a Software Engineer that loves vegetables and Jazz music.",
+  current_objectives: "Right now I am learning GraphQL, Typescript, and honing in my React skills.\nOutside of my work with Lendmarx, I am working on an SMS marketing product, and a prototype of a new web application for a client.",
   skills:
     '<span class="code">Languages:</span> Python, JavaScript, Java, C, PHP, HTML, CSS',
   education:
